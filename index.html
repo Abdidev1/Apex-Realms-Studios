@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Realms Studios - Next Generation Experiences</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar to match the dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; /* Indigo-600 */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Brand -->
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    <span class="text-2xl font-extrabold tracking-tight text-white">VORTEX</span>
+                </a>
+
+                <!-- Desktop Menu: 'Invest' removed -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#games" class="text-gray-300 hover:text-indigo-400 transition duration-200 py-2 rounded-md text-sm font-medium">Our Games</a>
+                    <a href="#about" class="text-gray-300 hover:text-indigo-400 transition duration-200 py-2 rounded-md text-sm font-medium">About Us</a>
+                    <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition duration-200 py-2 rounded-md text-sm font-medium">Careers</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu: 'Invest' removed -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-800">
+                <a href="#games" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition duration-200">Our Games</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition duration-200">About Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition duration-200">Careers</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-24 pb-32 md:pt-40 md:pb-48">
+            <div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/1f2937/4f46e5?text=VORTEX+GAME+BG');"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4">
+                        Building the Next <span class="text-indigo-400">Generation</span> of Gaming
+                    </h1>
+                    <p class="mt-3 text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto">
+                        We transform creative ideas into blockbuster IPs on the world's largest platforms.
+                    </p>
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <a href="#games" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.02]">
+                            Explore Our Portfolio
+                        </a>
+                        <a href="#about" class="inline-flex items-center px-8 py-3 border border-indigo-600 text-base font-medium rounded-xl shadow-lg text-indigo-400 bg-gray-800 hover:bg-gray-700 transition duration-300 transform hover:scale-[1.02]">
+                            Learn About Our Vision
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games/Portfolio Section -->
+        <section id="games" class="py-24 bg-gray-800/50 border-t border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-semibold text-indigo-400 tracking-wider uppercase mb-2">Our Creations</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">
+                        Blockbuster Games and Original IPs
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Game Card 1 -->
+                    <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-indigo-500/30 group">
+                        <img src="https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+1" onerror="this.src='https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+1'" alt="Futuristic Shooter Game" class="w-full h-56 object-cover transform transition duration-500 group-hover:opacity-80">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Aetherium Blitz</h3>
+                            <p class="text-gray-400 text-sm mb-4">An adrenaline-fueled Sci-Fi FPS set in a distant, forgotten galaxy.</p>
+                            <span class="inline-block bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">ROBLOX</span>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 2 -->
+                    <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-indigo-500/30 group">
+                        <img src="https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+2" onerror="this.src='https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+2'" alt="Fantasy RPG Game" class="w-full h-56 object-cover transform transition duration-500 group-hover:opacity-80">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Chronos Keepers</h3>
+                            <p class="text-gray-400 text-sm mb-4">A massive multiplayer role-playing experience with complex lore and crafting.</p>
+                            <span class="inline-block bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">PC / Console</span>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 3 -->
+                    <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-indigo-500/30 group">
+                        <img src="https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+3" onerror="this.src='https://placehold.co/600x400/1f2937/f3f4f6?text=Game+Title+3'" alt="Simulation/Tycoon Game" class="w-full h-56 object-cover transform transition duration-500 group-hover:opacity-80">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">City Skylines: Mobile</h3>
+                            <p class="text-gray-400 text-sm mb-4">Bringing the complexity of city-building to the palm of your hand.</p>
+                            <span class="inline-block bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:flex lg:items-center lg:justify-between">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-sm font-semibold text-indigo-400 tracking-wider uppercase mb-2">Our Mission</h2>
+                        <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                            The Future is Built on <span class="text-indigo-400">Passion</span>.
+                        </p>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Vortex Games was founded on the principle that exceptional talent, given the right resources and creative freedom, can build worlds that captivate millions. We operate as both a high-growth studio and a strategic incubator, backing ambitious creators to scale their visions into global franchises.
+                        </p>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 flex-shrink-0 text-indigo-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Full Creative and Financial Backing
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 flex-shrink-0 text-indigo-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Expertise in Platform Scaling (Roblox, Mobile)
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 flex-shrink-0 text-indigo-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Data-Driven Development and Monetization
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 lg:mt-0 lg:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-6 shadow-2xl border border-gray-700">
+                            <h4 class="text-xl font-bold mb-4 text-indigo-400">Quick Stats</h4>
+                            <dl class="space-y-4">
+                                <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                                    <dt class="text-gray-400">Total Players Reached</dt>
+                                    <dd class="text-2xl font-extrabold text-white">400M+</dd>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                                    <dt class="text-gray-400">Active IPs</dt>
+                                    <dd class="text-2xl font-extrabold text-white">6</dd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <dt class="text-gray-400">Average Growth Rate</dt>
+                                    <dd class="text-2xl font-extrabold text-white">120% YoY</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact Section -->
+        <section id="contact" class="bg-indigo-600 py-16 rounded-t-[40px] mt-12 shadow-inner shadow-indigo-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-white">
+                    Ready to Build the Future with Us?
+                </h2>
+                <p class="mt-4 text-xl text-indigo-200">
+                    We're looking for world-class talent and partners. Drop us a line.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="mailto:careers@vortexgames.com" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-indigo-600 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-[1.02]">
+                        Join Our Team
+                    </a>
+                    <a href="mailto:partnerships@vortexgames.com" class="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-xl shadow-lg text-white hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.02]">
+                        Partnerships
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 VORTEX Games, Inc. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-200 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-200 text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            // Function to toggle the menu visibility
+            const toggleMenu = () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true' || false;
+                button.setAttribute('aria-expanded', !isExpanded);
+                menu.classList.toggle('hidden');
+            };
+
+            // Event listener for the button click
+            button.addEventListener('click', toggleMenu);
+
+            // Event listener to close the menu when a link is clicked
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
