@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apex Realms Studios</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #ffffff;
+    --off-white: #f9f8f6;
+    --light-gray: #f2f1ef;
+    --border: #e8e6e2;
+    --text-primary: #0f0f0f;
+    --text-secondary: #6b6760;
+    --text-muted: #a8a49e;
+    --accent: #ff4d1c;
+    --accent-soft: #fff1ec;
+    --accent2: #0f0f0f;
+    --nav-height: 72px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--nav-height);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw;
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-socials {
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .nav-socials a {
+    width: 34px; height: 34px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 1rem;
+  }
+  .nav-socials a:hover {
+    background: var(--text-primary);
+    color: var(--white);
+    border-color: var(--text-primary);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--text-primary); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: calc(var(--nav-height) + 4rem) 5vw 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(80px, 18vw, 220px);
+    font-weight: 800;
+    color: rgba(0,0,0,0.028);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.04em;
+    z-index: 0;
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 820px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    margin-bottom: 1.75rem;
+    border: 1px solid rgba(255,77,28,0.15);
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+  .hero-title em { font-style: normal; color: var(--accent); }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+  .btn-primary {
+    background: var(--text-primary);
+    color: var(--white);
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1.5px solid var(--border);
+    padding: 0.875rem 2rem;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--text-primary); transform: translateY(-1px); }
+
+  /* ── FEATURED GAME CARD ── */
+  .hero-featured {
+    margin-top: 4rem;
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; gap: 2rem;
+    max-width: 680px;
+    position: relative; z-index: 1;
+  }
+  .featured-icon {
+    width: 64px; height: 64px;
+    background: var(--accent);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+  .featured-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+  .featured-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+  }
+  .featured-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .featured-arrow {
+    margin-left: auto;
+    width: 40px; height: 40px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+  .featured-arrow:hover {
+    background: var(--text-primary);
+    color: var(--white);
+    border-color: var(--text-primary);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 6rem 5vw; }
+  section:nth-child(even) { background: var(--off-white); }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  /* ── GAMES ── */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .game-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.25s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: rgba(0,0,0,0.12);
+  }
+
+  .game-thumb {
+    width: 100%; aspect-ratio: 16/9;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .game-thumb-bg {
+    position: absolute; inset: 0;
+    opacity: 0.12;
+  }
+
+  .game-thumb-emoji { position: relative; z-index: 1; }
+
+  .game-info { padding: 1.25rem; }
+  .game-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  .game-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .game-tag {
+    display: inline-block;
+    background: var(--light-gray);
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+  }
+  .game-link-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .game-roblox-btn {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 0.3rem;
+    transition: opacity 0.2s;
+  }
+  .game-roblox-btn:hover { opacity: 0.7; }
+
+  /* ── STATS ── */
+  #stats { background: var(--text-primary); }
+  #stats .section-label { color: #ff8a66; }
+  #stats .section-title { color: var(--white); }
+  #stats .section-sub { color: rgba(255,255,255,0.5); }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .stat-cell {
+    background: var(--text-primary);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-cell::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at center, rgba(255,77,28,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── TEAM ── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .team-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.07);
+  }
+
+  .team-avatar {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+    position: relative;
+  }
+  .team-avatar::after {
+    content: '';
+    position: absolute; inset: -3px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--accent), transparent) border-box;
+  }
+
+  .team-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+  .team-handle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    font-family: 'DM Sans', monospace;
+  }
+  .team-role {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+  }
+  .team-role.lead { background: #f0f0f0; color: var(--text-primary); }
+  .team-role.founder { background: var(--text-primary); color: var(--white); }
+
+  /* ── COMMUNITY ── */
+  .community-inner {
+    background: var(--text-primary);
+    border-radius: 24px;
+    padding: 5rem 4vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .community-inner::before {
+    content: 'JOIN';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Syne', sans-serif;
+    font-size: 16rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.025);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
+  }
+  .community-inner .section-title { color: var(--white); position: relative; z-index: 1; }
+  .community-inner .section-sub { color: rgba(255,255,255,0.5); position: relative; z-index: 1; margin: 0 auto 2.5rem; text-align: center; }
+
+  .social-pills {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .social-pill {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .social-pill:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.04);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 3rem 5vw;
+  }
+
+  .footer-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 3rem; flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand .nav-logo { display: inline-block; margin-bottom: 0.75rem; font-size: 1.1rem; }
+  .footer-brand p { font-size: 0.82rem; color: var(--text-muted); max-width: 220px; line-height: 1.65; }
+
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li + li { margin-top: 0.6rem; }
+  .footer-col ul a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--accent); }
+
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: var(--text-primary); }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: var(--nav-height); left: 0; right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 5vw;
+    z-index: 99;
+    flex-direction: column; gap: 0;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 0.875rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links, .nav-socials { display: none; }
+    .hamburger { display: flex; }
+    .hero-featured { flex-direction: column; gap: 1rem; }
+    .featured-arrow { margin-left: 0; align-self: flex-start; }
+    .footer-top { flex-direction: column; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">Apex <span>Realms</span></a>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#community">Community</a></li>
+  </ul>
+
+  <div class="nav-socials">
+    <a href="https://www.instagram.com/_apex_realms_studios__/" target="_blank" title="Instagram" aria-label="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.roblox.com" target="_blank" title="Roblox" aria-label="Roblox">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5.315 2L2 18.685 18.684 22 22 5.315zm10.093 11.56l-3.77-.826-.826 3.77-3.77-.826.826-3.771-3.77-.826.826-3.77 3.77.826.826-3.77 3.77.826-.826 3.77 3.77.826z"/></svg>
+    </a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#games" onclick="closeMobile()">Games</a>
+  <a href="#stats" onclick="closeMobile()">Stats</a>
+  <a href="#team" onclick="closeMobile()">Team</a>
+  <a href="#community" onclick="closeMobile()">Community</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-text">APEX</div>
+  <div class="hero-content reveal">
+    <div class="hero-badge">Now Live on Roblox</div>
+    <h1 class="hero-title">
+      Welcome to<br>
+      <em>Apex Realms</em><br>
+      Studios!
+    </h1>
+    <p class="hero-desc">Building awesome Roblox games with our incredible community. Obbies, survival, adventure — fun for everyone.</p>
+    <div class="hero-actions">
+      <a href="#games" class="btn-primary">Explore Our Games →</a>
+      <a href="#team" class="btn-secondary">Meet the Team</a>
+    </div>
+  </div>
+
+  <div class="hero-featured reveal">
+    <div class="featured-icon">🧗</div>
+    <div>
+      <div class="featured-label">Featured Game</div>
+      <div class="featured-title">Pixel Climb</div>
+      <div class="featured-desc">240+ meticulously designed stages. Can you conquer the ultimate obby?</div>
+    </div>
+    <a href="https://www.roblox.com/games/119809860666287/Pixel-Climb-240-Stages" target="_blank" class="featured-arrow" aria-label="Play Pixel Climb">→</a>
+  </div>
+</section>
+
+<!-- GAMES -->
+<section id="games">
+  <div class="section-label reveal">Our Creations</div>
+  <h2 class="section-title reveal">Games We've Built</h2>
+  <p class="section-sub reveal">Obby, Zombie Survival, Cart Rides, and more — all free to play on Roblox.</p>
+
+  <div class="games-grid">
+    <a class="game-card reveal" href="https://www.roblox.com/games/119809860666287/Pixel-Climb-240-Stages" target="_blank">
+      <div class="game-thumb" style="background:#fff8f5;">
+        <div class="game-thumb-bg" style="background: linear-gradient(135deg,#ff4d1c,#ff8a66);"></div>
+        <div class="game-thumb-emoji">🧗</div>
+      </div>
+      <div class="game-info">
+        <div class="game-name">Pixel Climb</div>
+        <div class="game-desc">240+ meticulously designed stages of precision parkour. Prove your obby skills!</div>
+        <span class="game-tag">Obby</span>
+        <div class="game-link-row">
+          <span class="game-roblox-btn">Play on Roblox ↗</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="game-card reveal" href="https://www.roblox.com/games/83350526922662/PLAGUEFALL" target="_blank">
+      <div class="game-thumb" style="background:#f5f8f2;">
+        <div class="game-thumb-bg" style="background: linear-gradient(135deg,#3b6d11,#97c459);"></div>
+        <div class="game-thumb-emoji">🧟</div>
+      </div>
+      <div class="game-info">
+        <div class="game-name">PLAGUEFALL</div>
+        <div class="game-desc">Survive waves of zombies with friends. Manage resources, buy weapons, and fight back.</div>
+        <span class="game-tag">Survival</span>
+        <div class="game-link-row">
+          <span class="game-roblox-btn">Play on Roblox ↗</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="game-card reveal" href="https://www.roblox.com/games/73018496230642/Cart-Rush-BETA" target="_blank">
+      <div class="game-thumb" style="background:#f5f7ff;">
+        <div class="game-thumb-bg" style="background: linear-gradient(135deg,#185fa5,#85b7eb);"></div>
+        <div class="game-thumb-emoji">🛒</div>
+      </div>
+      <div class="game-info">
+        <div class="game-name">Cart-Rush</div>
+        <div class="game-desc">Hop in a cart and launch through a custom-built winding track at full speed!</div>
+        <span class="game-tag">Casual</span>
+        <div class="game-link-row">
+          <span class="game-roblox-btn">Play on Roblox ↗</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="game-card reveal" href="https://www.roblox.com/games/98010957959094/Badges-for-Absolutely-Everything" target="_blank">
+      <div class="game-thumb" style="background:#fffbf0;">
+        <div class="game-thumb-bg" style="background: linear-gradient(135deg,#ba7517,#ef9f27);"></div>
+        <div class="game-thumb-emoji">🏆</div>
+      </div>
+      <div class="game-info">
+        <div class="game-name">Badges for Everything</div>
+        <div class="game-desc">Every action earns a badge. Walk five steps? Badge. Stand still? Badge. Collect them all!</div>
+        <span class="game-tag">Achievement</span>
+        <div class="game-link-row">
+          <span class="game-roblox-btn">Play on Roblox ↗</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="game-card reveal" href="https://www.roblox.com/games/87705680073722/Interstellar-Glass-Bridge" target="_blank">
+      <div class="game-thumb" style="background:#f5f0ff;">
+        <div class="game-thumb-bg" style="background: linear-gradient(135deg,#534ab7,#afa9ec);"></div>
+        <div class="game-thumb-emoji">🌌</div>
+      </div>
+      <div class="game-info">
+        <div class="game-name">Interstellar Glass Bridge</div>
+        <div class="game-desc">Lost in the asteroid abyss. Every step is a 50/50 gamble. Can you make it across?</div>
+        <span class="game-tag">Survival</span>
+        <div class="game-link-row">
+          <span class="game-roblox-btn">Play on Roblox ↗</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="section-label reveal">The Numbers</div>
+  <h2 class="section-title reveal">Some Big Numbers</h2>
+  <p class="section-sub reveal">Ever wonder why we're called Apex? Here's what our community looks like.</p>
+
+  <div class="stats-grid reveal">
+    <div class="stat-cell">
+      <div class="stat-num">4.5<span>K+</span></div>
+      <div class="stat-label">Total Visits</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">800<span>+</span></div>
+      <div class="stat-label">Community Members</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Games Published</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">3<span>K+</span></div>
+      <div class="stat-label">Robux Earned</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="section-label reveal">The Creators</div>
+  <h2 class="section-title reveal">The People Behind Apex Realms</h2>
+  <p class="section-sub reveal">A small, dedicated team of developers, builders, and scripters working together to build unforgettable Roblox worlds.</p>
+
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-avatar" style="background: #ff4d1c;">AB</div>
+      <div class="team-name">Abdi</div>
+      <div class="team-handle">@batman1917a</div>
+      <span class="team-role founder">Founder &amp; Senior Engineer</span>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="team-avatar" style="background: #0f4c81;">GR</div>
+      <div class="team-name">Grimm</div>
+      <div class="team-handle">@frozen134865</div>
+      <span class="team-role lead">Co-Founder &amp; Lead Dev</span>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="team-avatar" style="background: #3b1fa8;">NY</div>
+      <div class="team-name">Nyx</div>
+      <div class="team-handle">@frozen8068</div>
+      <span class="team-role lead">Co-Founder &amp; Lead Dev</span>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="team-avatar" style="background: #2d7a3a;">CB</div>
+      <div class="team-name">CaseyBrown</div>
+      <div class="team-handle">@Caseyboy1910</div>
+      <span class="team-role">Developer</span>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="team-avatar" style="background: #8a3fb5;">RY</div>
+      <div class="team-name">Rayyan</div>
+      <div class="team-handle">@Rayyan2011RS</div>
+      <span class="team-role">Developer</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" style="background: var(--off-white);">
+  <div class="community-inner reveal">
+    <div class="section-label" style="position:relative;z-index:1;">Community</div>
+    <h2 class="section-title">Join Our Community!</h2>
+    <p class="section-sub">Get the latest updates, game news, and connect with fellow players and developers.</p>
+
+    <div class="social-pills">
+      <a href="https://www.instagram.com/_apex_realms_studios__/" target="_blank" class="social-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.roblox.com" target="_blank" class="social-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5.315 2L2 18.685 18.684 22 22 5.315zm10.093 11.56l-3.77-.826-.826 3.77-3.77-.826.826-3.771-3.77-.826.826-3.77 3.77.826.826-3.77 3.77.826-.826 3.77 3.77.826z"/></svg>
+        Roblox
+      </a>
+      <a href="#community" class="social-pill">
+        💼 Join Our Team ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="nav-logo" href="#home">Apex <span style="color:var(--accent)">Realms</span></a>
+      <p>Indie Roblox game studio building fun, creative experiences for players everywhere.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/_apex_realms_studios__/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.roblox.com" target="_blank">Roblox</a></li>
+        <li><a href="#community">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Apex Realms Studios. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 72;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
