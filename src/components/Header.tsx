@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { Volume2, VolumeX } from 'lucide-react';
 import { toggleAudio, playClick } from '../utils/audio';
 
 interface HeaderProps {
@@ -70,7 +70,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
         </span>
       </a>
 
-      {/* Center Zone: Floating Pill Menu */}
+      {/* Center Zone: Floating Pill Contents & Audio */}
       <div className="flex items-center gap-3">
         <button
           onClick={() => {
@@ -82,7 +82,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
               ? 'bg-slate-900/5 hover:bg-slate-900/10 text-slate-900 border border-slate-900/10'
               : 'bg-white/15 hover:bg-white/25 text-white border border-white/20 backdrop-blur-md'
           }`}
-          aria-label="Open Navigation Menu"
+          aria-label="Open Contents Menu"
         >
           <span className="flex items-center gap-1">
             <span className={`w-1.5 h-1.5 rounded-full ${isLightBackground ? 'bg-slate-900' : 'bg-white'}`} />
@@ -107,24 +107,8 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
         </button>
       </div>
 
-      {/* Primary Action CTA */}
-      <div className="flex items-center gap-4">
-        <button
-          onClick={() => {
-            playClick();
-            onOpenQuote();
-          }}
-          className={`px-5 md:px-7 py-2.5 rounded-full text-xs md:text-sm font-extrabold tracking-tight transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap ${
-            isLightBackground
-              ? 'bg-[#5a1df5] hover:bg-[#4b14d8] text-white'
-              : themeMode === 'green'
-              ? 'bg-slate-950 hover:bg-black text-white'
-              : 'bg-white hover:bg-slate-100 text-[#5a1df5]'
-          }`}
-        >
-          Commission Studio
-        </button>
-      </div>
+      {/* Empty right placeholder to maintain justified spacing */}
+      <div className="hidden md:block w-24" />
     </header>
   );
 }
