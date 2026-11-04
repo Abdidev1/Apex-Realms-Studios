@@ -32,7 +32,7 @@ export default function InnovationMarqueeSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-7">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a0524] tracking-tight leading-[1.12] font-body">
-            Harnessing cutting-edge Luau engine architecture and procedural generation to craft games players remember
+            We build fun, well made Roblox games that keep players coming back.
           </h3>
         </div>
 
