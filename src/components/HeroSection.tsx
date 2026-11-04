@@ -52,7 +52,7 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
             </defs>
             <text className="text-[9px] uppercase font-extrabold tracking-[0.25em] fill-white/95">
               <textPath href="#heroCirclePath" startOffset="0%">
-                PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT •
+                PLAY • ENJOY • REPEAT •
               </textPath>
             </text>
           </svg>
