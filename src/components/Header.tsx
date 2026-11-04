@@ -55,7 +55,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
-      {/* Brand Zone */}
+      {/* Brand Zone: Logo only */}
       <a
         href="#"
         onClick={(e) => {
@@ -63,21 +63,13 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
           playClick();
         }}
-        className="group flex items-center gap-2.5 transition-transform duration-200 select-none hover:opacity-90"
+        className="group flex items-center transition-transform duration-200 select-none hover:scale-105"
       >
         <img 
           src="/assets/images/logo.png" 
           alt="Apex Realms Studios Logo" 
-          className="w-10 h-10 object-contain rounded-xl shadow-md border border-white/10" 
+          className="h-10 md:h-12 w-auto object-contain rounded-xl shadow-lg border border-white/15 bg-black/40 p-1" 
         />
-        <div className="flex flex-col">
-          <span className={`text-base md:text-lg font-black tracking-tight font-display lowercase leading-none ${isLightBackground ? 'text-slate-950' : 'text-white'}`}>
-            apex realms
-          </span>
-          <span className="text-[9px] font-bold text-[#34f546] font-mono tracking-wider">
-            studios®
-          </span>
-        </div>
       </a>
 
       {/* Center Zone: Floating Pill Menu */}
