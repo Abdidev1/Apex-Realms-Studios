@@ -1,5 +1,5 @@
 import React from 'react';
-import { Maximize2, Sparkles, Gamepad2 } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
 import { playClick } from '../utils/audio';
 
 export interface SlideItem {
@@ -11,14 +11,15 @@ export interface SlideItem {
   description: string;
   metrics: string;
   techSecrets: string[];
+  externalUrl?: string;
 }
 
 export const SHOWCASE_SLIDES: SlideItem[] = [
   {
     id: 'pixel-climb',
-    title: 'Pixel Climb • The Ultimate 240-Stage Obby',
-    category: 'Precision Parkour & Obby',
-    image: '/src/assets/images/slide_space_earth_1793646163026.jpg',
+    title: 'Pixel Climb',
+    category: 'PRECISION PARKOUR & OBBY',
+    image: '/assets/images/pixel_climb_banner.jpg',
     tags: ['240+ Precision Stages', 'Dynamic Momentum Engine', 'Zero Latency Checkpoints'],
     description: 'The definitive competitive obstacle experience on Roblox. Over 240 meticulously crafted stages designed for speedrunners and casual players alike with zero physics desync.',
     metrics: '42M+ Plays · 96% Player Approval',
@@ -27,6 +28,7 @@ export const SHOWCASE_SLIDES: SlideItem[] = [
       'Dynamic momentum conservation and air-strafe Luau controller',
       'Modular stage chunk streaming for ultra-low memory usage on mobile devices',
     ],
+    externalUrl: 'https://www.roblox.com/games/119809860666287/Pixel-Climb',
   },
   {
     id: 'undead-outbreak',
@@ -120,7 +122,11 @@ export default function ShowcaseSection({ onSelectSlide, onOpenQuote }: Showcase
               key={slide.id}
               onClick={() => {
                 playClick();
-                onSelectSlide(slide);
+                if (slide.externalUrl) {
+                  window.open(slide.externalUrl, '_blank', 'noopener,noreferrer');
+                } else {
+                  onSelectSlide(slide);
+                }
               }}
               className="group relative rounded-3xl sm:rounded-4xl overflow-hidden bg-slate-950 border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col"
             >
@@ -133,14 +139,17 @@ export default function ShowcaseSection({ onSelectSlide, onOpenQuote }: Showcase
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
 
-                {/* Top Badge */}
+                {/* Top Badge: category top-left */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
                   <span className="px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider font-mono">
                     {slide.category}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#5a1df5] group-hover:text-white transition-colors">
-                    <Maximize2 size={14} />
-                  </div>
+                  {/* For Pixel Climb we remove maximize button, for others keep or omit */}
+                  {slide.externalUrl ? null : (
+                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#5a1df5] transition-colors">
+                      <span className="text-xs">↗</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Bottom title */}
