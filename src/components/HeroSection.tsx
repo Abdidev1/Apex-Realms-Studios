@@ -20,15 +20,12 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
 
       {/* Monumental Headline matching the exact aesthetic */}
       <div className="relative z-20 my-auto flex flex-col items-center justify-center text-center">
-        <h1 className="font-display text-[15.5vw] sm:text-[13.5vw] md:text-[12vw] lg:text-[10.5vw] leading-[0.86] tracking-tight font-extrabold uppercase">
+        <h1 className="font-display text-[12vw] sm:text-[10vw] md:text-[8.5vw] leading-[0.9] tracking-tight font-extrabold uppercase">
           <span className="block text-white drop-shadow-md">
-            THE GREATEST
-          </span>
-          <span className="block text-white drop-shadow-md">
-            GAMES BUILD
+            Games worth
           </span>
           <span className="block text-[#0a0524] drop-shadow-sm">
-            THE FUTURE
+            playing
           </span>
         </h1>
       </div>
