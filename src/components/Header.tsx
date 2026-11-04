@@ -63,19 +63,21 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
           playClick();
         }}
-        className={`group flex items-baseline gap-1.5 transition-colors duration-200 select-none ${
-          isLightBackground ? 'text-slate-950' : 'text-white'
-        }`}
+        className="group flex items-center gap-2.5 transition-transform duration-200 select-none hover:opacity-90"
       >
-        <span className="text-xl md:text-2xl font-black tracking-tight font-display lowercase">
-          apex
-        </span>
-        <span className="text-xl md:text-2xl font-light tracking-tight font-display lowercase opacity-90">
-          realms
-        </span>
-        <span className="text-[10px] font-bold -translate-y-2 text-[#34f546] font-mono">
-          studios®
-        </span>
+        <img 
+          src="/assets/images/logo.png" 
+          alt="Apex Realms Studios Logo" 
+          className="w-10 h-10 object-contain rounded-xl shadow-md border border-white/10" 
+        />
+        <div className="flex flex-col">
+          <span className={`text-base md:text-lg font-black tracking-tight font-display lowercase leading-none ${isLightBackground ? 'text-slate-950' : 'text-white'}`}>
+            apex realms
+          </span>
+          <span className="text-[9px] font-bold text-[#34f546] font-mono tracking-wider">
+            studios®
+          </span>
+        </div>
       </a>
 
       {/* Center Zone: Floating Pill Menu */}
