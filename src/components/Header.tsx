@@ -55,7 +55,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
-      {/* Brand Zone: Correct A Logo Image */}
+      {/* Brand Zone: Direct root logo path for Vercel deployment */}
       <a
         href="#"
         onClick={(e) => {
@@ -66,9 +66,9 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
         className="group flex items-center transition-transform duration-200 select-none hover:scale-105"
       >
         <img 
-          src="/assets/images/logo.png" 
+          src="/logo.png" 
           alt="Apex Realms Logo" 
-          className="h-10 w-10 md:h-11 md:w-11 object-cover rounded-xl shadow-xl border-2 border-white/25 bg-black/40" 
+          className="h-11 w-11 md:h-12 md:w-12 object-cover rounded-xl shadow-2xl border-2 border-white/30 bg-black/50" 
         />
       </a>
 
