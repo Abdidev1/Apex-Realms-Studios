@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, ArrowDown, Sparkles, Gamepad2 } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { playClick } from '../utils/audio';
 
 interface HeroSectionProps {
@@ -18,7 +18,7 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
 
       <div className="w-full h-4" />
 
-      {/* Monumental Headline matching the exact aesthetic */}
+      {/* Monumental Headline */}
       <div className="relative z-20 my-auto flex flex-col items-center justify-center text-center">
         <h1 className="font-display text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8.5vw] leading-[0.88] tracking-tight font-extrabold uppercase">
           <span className="block text-white drop-shadow-md">
@@ -30,9 +30,8 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
         </h1>
       </div>
 
-      {/* Bottom Bar: Removed bottom-left widget, keeping rotating badge on right aligned to bottom right */}
+      {/* Bottom Right Rotating Stamp Badge */}
       <div className="relative z-20 w-full flex items-end justify-end gap-6 mt-4">
-        {/* Right: Rotating "Play • Enjoy • Repeat •" Circular Stamp Badge */}
         <div
           onClick={() => {
             playClick();
@@ -42,16 +41,16 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
           title="Scroll Down"
         >
           <svg
-            className="w-full h-full animate-[spin_12s_linear_infinite]"
+            className="w-full h-full animate-[spin_16s_linear_infinite]"
             viewBox="0 0 100 100"
           >
             <defs>
               <path
                 id="heroCirclePath"
-                d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
+                d="M 50, 50 m -34, 0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0"
               />
             </defs>
-            <text className="text-[9.5px] uppercase font-bold tracking-[0.22em] fill-white/90">
+            <text className="text-[8.5px] uppercase font-extrabold tracking-[0.2em] fill-white/95">
               <textPath href="#heroCirclePath" startOffset="0%">
                 PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT •
               </textPath>
