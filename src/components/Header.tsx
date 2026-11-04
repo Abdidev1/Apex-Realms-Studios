@@ -55,7 +55,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
-      {/* Brand Zone: Bold Neon Green Apex Realms Studios text */}
+      {/* Brand Zone: Bold Neon Green APEX REALMS STUDIOS text */}
       <a
         href="#"
         onClick={(e) => {
@@ -89,7 +89,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
             <span className={`w-1.5 h-1.5 rounded-full ${isLightBackground ? 'bg-slate-900' : 'bg-white'}`} />
             <span className={`w-1.5 h-1.5 rounded-full ${isLightBackground ? 'bg-slate-900' : 'bg-white'}`} />
           </span>
-          <span className="font-body">Menu</span>
+          <span className="font-body">Contents</span>
         </button>
 
         {/* Ambient sound toggle */}
