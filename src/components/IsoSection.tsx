@@ -40,7 +40,7 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
           </h3>
 
           <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl font-normal leading-relaxed font-body">
-            Founded and led by <strong>Abdullah Mohsin (Abdidev1)</strong>, Apex Realms Studios pushes the boundaries of multiplayer physics, procedural level generation, and competitive platforming.
+            Founded and led by <strong>Abdullah Mohsin (Abdidev1)</strong>, Apex Realms Studios makes fun obbies, platformers, and competitive games on Roblox.
           </p>
 
           {/* 3 Verification Cards */}
