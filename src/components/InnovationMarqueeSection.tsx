@@ -38,7 +38,7 @@ export default function InnovationMarqueeSection() {
 
         <div className="lg:col-span-5 lg:pt-4">
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed font-body">
-            At Apex Realms Studios, founded and led by Abdullah Mohsin (Abdidev1), we engineer unforgettable multiplayer mechanics from the ground up. Zero lag, buttery-smooth movement, and boundless replayability for communities worldwide.
+            Founded by Abdullah Mohsin (abdidev1), Apex Realms Studios focuses on building fast, smooth Roblox games. We work hard to eliminate lag and keep movement feeling clean so players worldwide can jump in and have a great time.
           </p>
         </div>
       </div>
