@@ -63,7 +63,7 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
                   6K+ Visits
                 </h4>
                 <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
-                  Concurrent sessions across survival, obby, and arcade experiences worldwide.
+                  Overall all-time game plays accumulated across all published experiences.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
                   1K+ Community Members
                 </h4>
                 <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
-                  Active players and developers collaborating daily in our vibrant Discord hub.
+                  Active Roblox group members and players following our studio updates.
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
                   4 Games Built
                 </h4>
                 <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
-                  Published experiences featuring custom Luau scripts, obstacle courses, and immersive mechanics.
+                  Four fully published Roblox games created and maintained by Apex Realms Studios.
                 </p>
               </div>
             </div>
