@@ -1,0 +1,6 @@
+{
+  "name": "Apex Realms Studios - Next-Gen Roblox Game Studio",
+  "description": "Apex Realms Studios by Abdullah Mohsin (Abdidev1) : Leading indie Roblox game studio with 116M+ visits, crafting legendary multiplayer experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
