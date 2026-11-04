@@ -55,6 +55,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
+      {/* Brand Zone: Original Logo Image */}
       <a
         href="#"
         onClick={(e) => {
@@ -64,13 +65,14 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
         }}
         className="group flex items-center transition-transform duration-200 select-none hover:scale-105"
       >
-        <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl overflow-hidden shadow-2xl border-2 border-white/30 bg-gradient-to-br from-[#7b2cbf] to-[#3c096c] p-0.5 flex items-center justify-center">
-          <span className="font-display font-black text-2xl text-white tracking-tighter drop-shadow-lg">
-            A
-          </span>
-        </div>
+        <img 
+          src="/assets/images/logo.png" 
+          alt="Apex Realms Studios Logo" 
+          className="h-11 md:h-12 w-auto object-contain rounded-xl shadow-xl border border-white/20 bg-black/40 p-0.5" 
+        />
       </a>
 
+      {/* Center Zone: Floating Pill Menu */}
       <div className="flex items-center gap-3">
         <button
           onClick={() => {
@@ -92,6 +94,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           <span className="font-body">Menu</span>
         </button>
 
+        {/* Ambient sound toggle */}
         <button
           onClick={handleAudioToggle}
           className={`hidden sm:flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ${
@@ -106,6 +109,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
         </button>
       </div>
 
+      {/* Primary Action CTA */}
       <div className="flex items-center gap-4">
         <button
           onClick={() => {
