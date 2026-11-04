@@ -105,10 +105,10 @@ export default function ShowcaseSection({ onSelectSlide, onOpenQuote }: Showcase
         {/* Title */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-[#0a0524] font-extrabold uppercase leading-[0.88]">
-            ONE ENGINE, <br />
-            INFINITE <span className="text-[#5a1df5]">REALMS</span>{' '}
+            ONE STUDIO, <br />
+            ENDLESS <span className="text-[#5a1df5]">FUN</span>{' '}
             <span className="block text-slate-300 text-3xl sm:text-5xl md:text-6xl tracking-widest mt-1">
-              EXPERIENCES
+              GAMES
             </span>
           </h2>
         </div>
