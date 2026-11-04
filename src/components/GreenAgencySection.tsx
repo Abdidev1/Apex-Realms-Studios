@@ -32,7 +32,7 @@ export default function GreenAgencySection() {
           {/* Left Column */}
           <div className="lg:col-span-8">
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-black leading-[1.08] font-body">
-              Our studio amplifies the thrill of next-generation gaming. We equip players who want to push the boundaries, across all genres.
+              At Apex Realms Studios, we build fun and challenging games on Roblox for players who love a good test of skill.
             </h2>
           </div>
 
@@ -40,10 +40,7 @@ export default function GreenAgencySection() {
           <div className="lg:col-span-4 lg:pt-36 flex flex-col justify-end">
             <div className="p-6 md:p-8 rounded-3xl bg-black/10 border border-black/15 backdrop-blur-xs">
               <p className="text-base sm:text-lg text-black font-medium leading-relaxed font-body">
-                Our players seek adrenaline, memorable adventures, and mechanics that feel crisp. With fluid movement, zero input lag, and immersive worlds, we give gameplay what matters most:{' '}
-                <span className="font-extrabold underline decoration-black decoration-2">
-                  sheer delight.
-                </span>
+                Whether you're rushing through fast paced obbies or competing against friends, we design games that are easy to jump into and enjoy.
               </p>
             </div>
           </div>
