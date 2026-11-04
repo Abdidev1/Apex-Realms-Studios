@@ -4,11 +4,11 @@ import { playClick } from '../utils/audio';
 
 const BADGES = [
   {
-    title: '116M+ TOTAL VISITS',
+    title: '6K+ TOTAL VISITS',
     sub: 'GLOBAL ENGAGEMENT',
     badgeText: 'Verified 2026',
-    rating: 'Top 1% Creator Tier',
-    desc: 'Hundreds of thousands of concurrent hours played across our original interactive Roblox titles.',
+    rating: 'Top Creator Tier',
+    desc: 'Thousands of plays accumulated across our original interactive Roblox titles.',
     icon: Users,
     gradient: 'from-[#1e0e4f] to-[#2c1370]',
   },
@@ -24,7 +24,7 @@ const BADGES = [
   {
     title: '96% POSITIVE APPROVAL',
     sub: 'COMMUNITY RATED',
-    badgeText: 'Over 25,000 Votes',
+    badgeText: 'Player Feedback',
     rating: '5.0 Star Feedback',
     desc: 'Uncompromising dedication to fair play, zero pay-to-win mechanics, and bug-free gameplay updates.',
     icon: Star,
