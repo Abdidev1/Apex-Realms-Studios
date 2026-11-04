@@ -20,52 +20,43 @@ export const SHOWCASE_SLIDES: SlideItem[] = [
     category: '',
     image: '/assets/images/pixel_climb_banner.jpg',
     tags: [],
-    description: 'The definitive competitive obstacle experience on Roblox.',
-    metrics: '42M+ Plays',
+    description: 'Precision parkour and obby experience.',
+    metrics: '',
     techSecrets: [],
     externalUrl: 'https://www.roblox.com/games/119809860666287/Pixel-Climb',
   },
   {
-    id: 'undead-outbreak',
-    title: 'Undead Outbreak • Wave Co-op Defense',
-    category: 'Survival & Multiplayer Co-op',
-    image: '/src/assets/images/slide_keynote_speaker_1793646163009.jpg',
-    tags: ['Custom Horde AI', 'Weapon Upgrade Crafting', 'Epic Boss Encounters'],
-    description: 'Survive unrelenting waves of infected with up to 8 players. Built with server-authoritative projectile physics, barricade construction, and atmospheric sound design.',
-    metrics: '28M+ Plays · 94% Retention Rate',
-    techSecrets: [
-      'Spatial hashing algorithm handling 100+ simultaneous zombie entities at 60 FPS',
-      'Lag-compensated hit registration ensuring fair gunplay across all pings',
-      'Dynamic progressive difficulty scaling based on team player count',
-    ],
+    id: 'lucky-block-obby',
+    title: 'Obby, But Every 5 Stages You Get A Lucky Block',
+    category: '',
+    image: '/assets/images/jm.png',
+    tags: [],
+    description: 'Stage progression with lucky block rewards.',
+    metrics: '',
+    techSecrets: [],
+    externalUrl: 'https://www.roblox.com/games/132276009709641/Obby-But-Every-5-Stages-You-Get-A-Lucky-Block',
   },
   {
-    id: 'cart-rush',
-    title: 'Cart Rush: Neon Odyssey • 60 FPS Coaster',
-    category: 'Physics Coaster & Arcade',
-    image: '/src/assets/images/slide_hypercar_mobility_1793646164240.jpg',
-    tags: ['Custom Spring Suspension', 'Futuristic Neon Track', 'Loop-de-Loop Physics'],
-    description: 'High-octane rail racing featuring custom physics equations that simulate realistic centrifugal force, rail friction, and adrenaline-pumping speed boosts.',
-    metrics: '26M+ Plays · Top Platform Ranked',
-    techSecrets: [
-      'RunService-bound physics calculations bypassing clunky standard Roblox seats',
-      'Procedural neon track lighting with bloom optimization for mobile',
-      'Interactive track triggers, splits, and community ghost lap replays',
-    ],
+    id: 'interstellar-glass-bridge',
+    title: 'Interstellar Glass Bridge',
+    category: '',
+    image: '/assets/images/Untitled.png',
+    tags: [],
+    description: 'Suspenseful glass bridge challenge.',
+    metrics: '',
+    techSecrets: [],
+    externalUrl: 'https://www.roblox.com/games/87705680073722/Interstellar-Glass-Bridge',
   },
   {
-    id: 'aetheria-forgotten',
-    title: 'Aetheria • Forgotten Realms RPG Adventure',
-    category: 'Open World RPG & Dungeons',
-    image: '/src/assets/images/slide_equestrian_luxury_1793646164149.jpg',
-    tags: ['Elemental Spell System', 'Persistent Inventory DataStore2', 'Dungeon Raids'],
-    description: 'An expansive fantasy realm featuring responsive combo combat, puzzle-driven ancient ruins, and cooperative boss raids for high-tier loot.',
-    metrics: '20M+ Plays · Hackathon Winner',
-    techSecrets: [
-      'Transactional DataStore architecture preventing any item duplication or rollbacks',
-      'VFX mesh deformation and particle lighting in real-time',
-      'State-machine driven dungeon bosses with telegraph attack patterns',
-    ],
+    id: 'badges-everything',
+    title: 'Badges for Absolutely Everything',
+    category: '',
+    image: '/assets/images/fdf.png',
+    tags: [],
+    description: 'Earn badges for everything you do.',
+    metrics: '',
+    techSecrets: [],
+    externalUrl: 'https://www.roblox.com/games/98010957959094/Badges-for-Absolutely-Everything',
   },
 ];
 
@@ -134,32 +125,11 @@ export default function ShowcaseSection({ onSelectSlide, onOpenQuote }: Showcase
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
 
-                {/* Top Badge: only if category exists */}
-                {slide.category && (
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
-                    <span className="px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider font-mono">
-                      {slide.category}
-                    </span>
-                  </div>
-                )}
-
                 {/* Bottom title */}
                 <div className="absolute bottom-6 left-6 right-6 text-white z-10">
-                  <h3 className="text-2xl sm:text-3xl font-extrabold font-body text-white drop-shadow-md">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-body text-white drop-shadow-md">
                     {slide.title}
                   </h3>
-                  {slide.tags && slide.tags.length > 0 && (
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {slide.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-white/15 text-white/90 border border-white/10"
-                        >
-                          ✦ {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
