@@ -50,9 +50,9 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
                 d="M 50, 50 m -34, 0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0"
               />
             </defs>
-            <text className="text-[8.5px] uppercase font-extrabold tracking-[0.2em] fill-white/95">
+            <text className="text-[9px] uppercase font-extrabold tracking-[0.25em] fill-white/95">
               <textPath href="#heroCirclePath" startOffset="0%">
-                PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT •
+                PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT • PLAY • ENJOY • REPEAT •
               </textPath>
             </text>
           </svg>
