@@ -13,17 +13,17 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
       className="relative z-20 -mt-10 md:-mt-16 pt-24 md:pt-36 pb-32 px-6 md:px-12 bg-white text-slate-900 curved-top-white shadow-[0_-25px_60px_rgba(0,0,0,0.12)] overflow-hidden select-none"
     >
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
-        {/* Screen 1: "WHEN THEY ARE CRAFTED WITH PERFECTION" */}
+        {/* Screen 1: "MADE BY PEOPLE WHO ACTUALLY PLAY." */}
         <div className="w-full py-16 md:py-24 border-b border-slate-100 flex flex-col items-center">
-          <h2 className="font-display text-[15vw] sm:text-[13vw] md:text-[11vw] lg:text-[9.5vw] leading-[0.88] tracking-tight font-extrabold uppercase">
+          <h2 className="font-display text-[12vw] sm:text-[10vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.9] tracking-tight font-extrabold uppercase">
             <span className="block text-[#0a0524]">
-              WHEN THEY ARE
+              MADE BY
             </span>
             <span className="block text-[#0a0524]">
-              CRAFTED WITH
+              PEOPLE WHO
             </span>
             <span className="block text-[#5a1df5]">
-              PERFECTION
+              ACTUALLY PLAY.
             </span>
           </h2>
         </div>
