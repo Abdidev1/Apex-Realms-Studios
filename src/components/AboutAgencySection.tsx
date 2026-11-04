@@ -56,7 +56,7 @@ export default function AboutAgencySection({ onOpenMenu }: AboutAgencySectionPro
 
             <div className="flex items-center justify-between text-xs text-white/60 font-mono border-t border-white/10 pt-3">
               <span>Solo Developed</span>
-              <span>116M+ Visits</span>
+              <span>6K+ Visits</span>
             </div>
           </div>
         </div>
