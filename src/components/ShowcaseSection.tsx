@@ -1,5 +1,4 @@
 import React from 'react';
-import { Gamepad2 } from 'lucide-react';
 import { playClick } from '../utils/audio';
 
 export interface SlideItem {
@@ -18,16 +17,12 @@ export const SHOWCASE_SLIDES: SlideItem[] = [
   {
     id: 'pixel-climb',
     title: 'Pixel Climb',
-    category: 'PRECISION PARKOUR & OBBY',
+    category: '',
     image: '/assets/images/pixel_climb_banner.jpg',
-    tags: ['240+ Precision Stages', 'Dynamic Momentum Engine', 'Zero Latency Checkpoints'],
-    description: 'The definitive competitive obstacle experience on Roblox. Over 240 meticulously crafted stages designed for speedrunners and casual players alike with zero physics desync.',
-    metrics: '42M+ Plays · 96% Player Approval',
-    techSecrets: [
-      'Custom client-predicted raycast collision for micro-precision landing',
-      'Dynamic momentum conservation and air-strafe Luau controller',
-      'Modular stage chunk streaming for ultra-low memory usage on mobile devices',
-    ],
+    tags: [],
+    description: 'The definitive competitive obstacle experience on Roblox.',
+    metrics: '42M+ Plays',
+    techSecrets: [],
     externalUrl: 'https://www.roblox.com/games/119809860666287/Pixel-Climb',
   },
   {
@@ -137,36 +132,34 @@ export default function ShowcaseSection({ onSelectSlide, onOpenQuote }: Showcase
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
 
-                {/* Top Badge: category top-left */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
-                  <span className="px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider font-mono">
-                    {slide.category}
-                  </span>
-                  {/* For Pixel Climb we remove maximize button, for others keep or omit */}
-                  {slide.externalUrl ? null : (
-                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#5a1df5] transition-colors">
-                      <span className="text-xs">↗</span>
-                    </div>
-                  )}
-                </div>
+                {/* Top Badge: only if category exists */}
+                {slide.category && (
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
+                    <span className="px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider font-mono">
+                      {slide.category}
+                    </span>
+                  </div>
+                )}
 
                 {/* Bottom title */}
                 <div className="absolute bottom-6 left-6 right-6 text-white z-10">
-                  <h3 className="text-xl sm:text-2xl font-bold font-body text-white drop-shadow-sm">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold font-body text-white drop-shadow-md">
                     {slide.title}
                   </h3>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {slide.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-white/15 text-white/90 border border-white/10"
-                      >
-                        ✦ {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {slide.tags && slide.tags.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {slide.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-white/15 text-white/90 border border-white/10"
+                        >
+                          ✦ {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
