@@ -1,5 +1,4 @@
 import React from 'react';
-import { Gamepad2, Award, Zap, Users, Code2 } from 'lucide-react';
 import { playClick } from '../utils/audio';
 
 interface IsoSectionProps {
@@ -43,51 +42,78 @@ export default function IsoSection({ onOpenQuote }: IsoSectionProps) {
             Founded and led by <strong>Abdullah Mohsin (Abdidev1)</strong>, Apex Realms Studios makes fun obbies, platformers, and competitive games on Roblox.
           </p>
 
-          {/* 3 Verification Cards */}
+          {/* 3 Verification Cards with Vibrant Green/Yellow Vertical Stripes Background */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl text-left">
-            <div className="p-6 md:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#5a1df5]/40 transition-all duration-300 hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-[#5a1df5]/10 text-[#5a1df5] flex items-center justify-center mb-5">
-                <Users size={24} />
+            {/* Box 1: Visits */}
+            <div className="relative p-6 md:p-8 rounded-3xl overflow-hidden shadow-xl border border-white/20 transition-all duration-300 hover:scale-105 group">
+              {/* Vertical Stripes Gradient Background */}
+              <div 
+                className="absolute inset-0 z-0 opacity-90"
+                style={{
+                  background: 'repeating-linear-gradient(90deg, #76ff03, #76ff03 10px, #aeea00 10px, #aeea00 20px, #ccff00 20px, #ccff00 30px)'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-0" />
+
+              <div className="relative z-10">
+                <div className="text-xs font-black uppercase tracking-wider text-black/80 font-mono mb-2 bg-white/40 backdrop-blur-xs px-2.5 py-1 rounded-md inline-block">
+                  Visits
+                </div>
+                <h4 className="text-3xl md:text-4xl font-black text-black font-display mb-2 drop-shadow-sm">
+                  6K+ Visits
+                </h4>
+                <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
+                  Concurrent sessions across survival, obby, and arcade experiences worldwide.
+                </p>
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono mb-1">
-                Global Player Base
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 font-body mb-2">
-                6K+ Visits
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
-                Concurrent sessions across survival, obby, and arcade experiences worldwide.
-              </p>
             </div>
 
-            <div className="p-6 md:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#5a1df5]/40 transition-all duration-300 hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-[#5a1df5]/10 text-[#5a1df5] flex items-center justify-center mb-5">
-                <Gamepad2 size={24} />
+            {/* Box 2: Community Members */}
+            <div className="relative p-6 md:p-8 rounded-3xl overflow-hidden shadow-xl border border-white/20 transition-all duration-300 hover:scale-105 group">
+              {/* Vertical Stripes Gradient Background */}
+              <div 
+                className="absolute inset-0 z-0 opacity-90"
+                style={{
+                  background: 'repeating-linear-gradient(90deg, #76ff03, #76ff03 10px, #aeea00 10px, #aeea00 20px, #ccff00 20px, #ccff00 30px)'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-0" />
+
+              <div className="relative z-10">
+                <div className="text-xs font-black uppercase tracking-wider text-black/80 font-mono mb-2 bg-white/40 backdrop-blur-xs px-2.5 py-1 rounded-md inline-block">
+                  Community Member
+                </div>
+                <h4 className="text-3xl md:text-4xl font-black text-black font-display mb-2 drop-shadow-sm">
+                  1K+ Community Members
+                </h4>
+                <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
+                  Active players and developers collaborating daily in our vibrant Discord hub.
+                </p>
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono mb-1">
-                Precision Design
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 font-body mb-2">
-                240+ Stages
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
-                Pixel Climb obby mechanics engineered with millisecond physics precision and zero input delay.
-              </p>
             </div>
 
-            <div className="p-6 md:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#5a1df5]/40 transition-all duration-300 hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-[#5a1df5]/10 text-[#5a1df5] flex items-center justify-center mb-5">
-                <Code2 size={24} />
+            {/* Box 3: Games Built */}
+            <div className="relative p-6 md:p-8 rounded-3xl overflow-hidden shadow-xl border border-white/20 transition-all duration-300 hover:scale-105 group">
+              {/* Vertical Stripes Gradient Background */}
+              <div 
+                className="absolute inset-0 z-0 opacity-90"
+                style={{
+                  background: 'repeating-linear-gradient(90deg, #76ff03, #76ff03 10px, #aeea00 10px, #aeea00 20px, #ccff00 20px, #ccff00 30px)'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-0" />
+
+              <div className="relative z-10">
+                <div className="text-xs font-black uppercase tracking-wider text-black/80 font-mono mb-2 bg-white/40 backdrop-blur-xs px-2.5 py-1 rounded-md inline-block">
+                  Games Built
+                </div>
+                <h4 className="text-3xl md:text-4xl font-black text-black font-display mb-2 drop-shadow-sm">
+                  4 Games Built
+                </h4>
+                <p className="text-xs sm:text-sm text-black/90 font-bold leading-relaxed font-body drop-shadow-xs">
+                  Published experiences featuring custom Luau scripts, obstacle courses, and immersive mechanics.
+                </p>
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono mb-1">
-                100% Solo Engineered
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 font-body mb-2">
-                Custom Luau
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
-                Full-stack game architecture, networking, security, anti-cheat, and rendering pipelines by Abdidev1.
-              </p>
             </div>
           </div>
         </div>
