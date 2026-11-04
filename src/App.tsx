@@ -6,7 +6,6 @@ import IsoSection from './components/IsoSection';
 import GreenAgencySection from './components/GreenAgencySection';
 import ShowcaseSection, { SHOWCASE_SLIDES, SlideItem } from './components/ShowcaseSection';
 import InnovationMarqueeSection from './components/InnovationMarqueeSection';
-import CyanQualitySection from './components/CyanQualitySection';
 import ExpertisesListSection from './components/ExpertisesListSection';
 import PresentationSphereSection from './components/PresentationSphereSection';
 import AboutAgencySection from './components/AboutAgencySection';
@@ -75,65 +74,62 @@ export default function App() {
 
       {/* Main Content Sections sequenced exactly like the video & screenshots */}
       <main className="relative">
-        {/* 1. Hero: LES MEILLEURES IDEES FONT L'AVENIR */}
+        {/* 1. Hero */}
         <HeroSection
           onOpenDemo={handleOpenDemo}
           onScrollToNext={handleScrollToNext}
         />
 
-        {/* 2. White: QUAND ELLES SONT BIEN PRÉSENTÉES + ISO 9001 */}
+        {/* 2. White: Studio & Stats */}
         <IsoSection
           onOpenQuote={() => setIsQuoteOpen(true)}
         />
 
-        {/* 3. Lime Green: Notre agence PowerPoint amplifie... + 3D Louvers */}
+        {/* 3. Lime Green: Agency statement */}
         <GreenAgencySection />
 
-        {/* 4. White: UN SEUL OUTIL, DES POSSIBILITÉS INFINIES + Showcase Cards */}
+        {/* 4. White: Games Showcase */}
         <ShowcaseSection
           onSelectSlide={(slide) => setSelectedSlide(slide)}
           onOpenQuote={() => setIsQuoteOpen(true)}
         />
 
-        {/* 5. Giant Violet Marquee: 2002 • ISO 9001 • 5 ÉTOILES GOOGLE... */}
+        {/* 5. Giant Violet Marquee */}
         <InnovationMarqueeSection />
 
-        {/* 6. Cyan: 0 retard sur +8 000 projets + Rotating Pinwheel Aperture */}
-        <CyanQualitySection />
-
-        {/* 7. Expertises: COMMUNICATION 360, VR, IA... */}
+        {/* 6. Expertises */}
         <ExpertisesListSection
           onOpenQuote={() => setIsQuoteOpen(true)}
         />
 
-        {/* 8. Black: 3D Interactive Presentation Globe / Sphere */}
+        {/* 7. Presentation Sphere */}
         <PresentationSphereSection />
 
-        {/* 9. White: TOUJOURS CARRÉS. JAMAIS FORMATÉS. + labas® */}
+        {/* 8. White: About Agency */}
         <AboutAgencySection
           onOpenMenu={() => setIsMenuOpen(true)}
         />
 
-        {/* 10. Interactive Before/After PowerPoint Makeover Slider */}
+        {/* 9. Before/After */}
         <BeforeAfterSection />
 
-        {/* 11. White: NOS DERNIÈRES RESSOURCES (Articles, Cas client, Livre blanc) */}
+        {/* 10. Resources */}
         <ResourcesSection />
 
-        {/* 12. Deep Indigo: ENGAGÉS POUR LA QUALITÉ (Medal Cards) */}
+        {/* 11. Quality Certifications */}
         <QualityCertificationsSection />
 
-        {/* 13. Brand Marquee */}
+        {/* 12. Brand Marquee */}
         <ClientsMarquee />
 
-        {/* 14. Testimonials Slider & FAQ "ON VOUS RÉPOND" */}
+        {/* 13. Testimonials & FAQ */}
         <TestimonialsAndFaqSection />
 
-        {/* 15. Method in 4 Steps */}
+        {/* 14. Method in Steps */}
         <MethodSection />
       </main>
 
-      {/* 16. Mega Footer: VOTRE IMPACT. */}
+      {/* Footer */}
       <Footer
         onOpenQuote={() => setIsQuoteOpen(true)}
         onOpenMenu={() => setIsMenuOpen(true)}
