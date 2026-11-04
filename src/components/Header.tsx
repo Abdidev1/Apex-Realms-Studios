@@ -55,7 +55,7 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           : 'bg-transparent'
       }`}
     >
-      {/* Brand Zone: Direct root logo path for Vercel deployment */}
+      {/* Brand Zone: Bold Neon Green Apex Realms Studios text */}
       <a
         href="#"
         onClick={(e) => {
@@ -63,13 +63,11 @@ export default function Header({ onOpenMenu, onOpenQuote }: HeaderProps) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
           playClick();
         }}
-        className="group flex items-center transition-transform duration-200 select-none hover:scale-105"
+        className="group flex items-center gap-2 transition-transform duration-200 select-none hover:scale-105"
       >
-        <img 
-          src="/logo.png" 
-          alt="Apex Realms Logo" 
-          className="h-11 w-11 md:h-12 md:w-12 object-cover rounded-xl shadow-2xl border-2 border-white/30 bg-black/50" 
-        />
+        <span className="font-display font-black text-lg md:text-xl tracking-tight uppercase text-[#34f546] drop-shadow-[0_0_12px_rgba(52,245,70,0.6)]">
+          APEX REALMS STUDIOS
+        </span>
       </a>
 
       {/* Center Zone: Floating Pill Menu */}
