@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Sparkles, Glasses, Cpu, Compass, Video, Gamepad2, Layers } from 'lucide-react';
+import { Sparkles, Glasses, Cpu, Compass, Video, Gamepad2, Layers } from 'lucide-react';
 import { playClick } from '../utils/audio';
 
 const EXPERTISES = [
   {
     id: 'luau-arch',
-    title: 'LUAU ENGINE ARCHITECTURE',
-    subtitle: 'Server-authoritative networking, anti-exploit, client prediction',
-    desc: 'Bulletproof systems engineered from scratch in clean Luau. Built to withstand exploits and scale to thousands of concurrent users.',
+    title: 'FOUNDER & SENIOR ENGINEER (ABDI)',
+    subtitle: '',
+    desc: 'Abdullah Mohsin, also known as Abdi/batman1917a, founded Apex Realms Studios back in 2025 and is the senior engineer. He builds all the core of the games.',
     icon: Cpu,
     image: '/src/assets/images/slide_keynote_speaker_1793646163009.jpg',
   },
@@ -83,18 +83,12 @@ export default function ExpertisesListSection({ onOpenQuote }: ExpertisesListSec
                 }`}
               >
                 <span
-                  className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight ${
+                  className={`font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight ${
                     isHovered ? 'text-[#0a0524]' : 'text-slate-400'
                   }`}
                 >
                   {item.title}
                 </span>
-                <ArrowUpRight
-                  size={24}
-                  className={`transition-opacity duration-200 ${
-                    isHovered ? 'opacity-100 text-[#5a1df5]' : 'opacity-0'
-                  }`}
-                />
               </button>
             );
           })}
@@ -109,32 +103,17 @@ export default function ExpertisesListSection({ onOpenQuote }: ExpertisesListSec
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
 
             {/* Content overlay */}
-            <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
-              <div className="flex items-center justify-between">
-                <span className="px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold font-mono">
-                  STUDIO ARCHITECTURE
-                </span>
-              </div>
-
+            <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
               <div>
-                <span className="text-xs uppercase font-bold text-[#34f546] font-mono block mb-1">
-                  {activeItem.subtitle}
-                </span>
-                <h4 className="text-2xl font-black font-body mb-2">
+                <h4 className="text-2xl font-black font-body mb-3">
                   {activeItem.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-200 font-body leading-relaxed">
                   {activeItem.desc}
                 </p>
-                <button
-                  onClick={onOpenQuote}
-                  className="mt-4 px-5 py-2 rounded-full bg-[#5a1df5] hover:bg-[#4711d4] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-                >
-                  Commission Game Engineering
-                </button>
               </div>
             </div>
           </div>
