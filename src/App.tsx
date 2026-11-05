@@ -8,8 +8,6 @@ import ShowcaseSection, { SHOWCASE_SLIDES, SlideItem } from './components/Showca
 import InnovationMarqueeSection from './components/InnovationMarqueeSection';
 import ExpertisesListSection from './components/ExpertisesListSection';
 import AboutAgencySection from './components/AboutAgencySection';
-import QualityCertificationsSection from './components/QualityCertificationsSection';
-import ClientsMarquee from './components/ClientsMarquee';
 import TestimonialsAndFaqSection from './components/TestimonialsAndFaqSection';
 import MethodSection from './components/MethodSection';
 import Footer from './components/Footer';
@@ -104,16 +102,10 @@ export default function App() {
           onOpenMenu={() => setIsMenuOpen(true)}
         />
 
-        {/* 8. Quality Certifications */}
-        <QualityCertificationsSection />
-
-        {/* 9. Brand Marquee */}
-        <ClientsMarquee />
-
-        {/* 10. Testimonials & FAQ */}
+        {/* 8. Testimonials & FAQ */}
         <TestimonialsAndFaqSection />
 
-        {/* 11. Method in Steps */}
+        {/* 9. Method in Steps */}
         <MethodSection />
       </main>
 
