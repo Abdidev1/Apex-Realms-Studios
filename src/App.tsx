@@ -8,7 +8,6 @@ import ShowcaseSection, { SHOWCASE_SLIDES, SlideItem } from './components/Showca
 import InnovationMarqueeSection from './components/InnovationMarqueeSection';
 import ExpertisesListSection from './components/ExpertisesListSection';
 import AboutAgencySection from './components/AboutAgencySection';
-import ResourcesSection from './components/ResourcesSection';
 import QualityCertificationsSection from './components/QualityCertificationsSection';
 import ClientsMarquee from './components/ClientsMarquee';
 import TestimonialsAndFaqSection from './components/TestimonialsAndFaqSection';
@@ -61,7 +60,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#5a1df5] font-body text-slate-900 selection:bg-[#34f546] selection:text-black">
-      {/* 3D Floating Crystals Three.js Cannvas */}
+      {/* 3D Floating Crystals Three.js Canvas */}
       <ThreeCanvas />
 
       {/* Adaptive Header Navigation */}
@@ -70,7 +69,7 @@ export default function App() {
         onOpenQuote={() => setIsQuoteOpen(true)}
       />
 
-      {/* Main Content Sections sequenced exactly like the video & screenshots */}
+      {/* Main Content Sections */}
       <main className="relative">
         {/* 1. Hero */}
         <HeroSection
@@ -105,19 +104,16 @@ export default function App() {
           onOpenMenu={() => setIsMenuOpen(true)}
         />
 
-        {/* 8. Resources */}
-        <ResourcesSection />
-
-        {/* 9. Quality Certifications */}
+        {/* 8. Quality Certifications */}
         <QualityCertificationsSection />
 
-        {/* 10. Brand Marquee */}
+        {/* 9. Brand Marquee */}
         <ClientsMarquee />
 
-        {/* 11. Testimonials & FAQ */}
+        {/* 10. Testimonials & FAQ */}
         <TestimonialsAndFaqSection />
 
-        {/* 12. Method in Steps */}
+        {/* 11. Method in Steps */}
         <MethodSection />
       </main>
 
