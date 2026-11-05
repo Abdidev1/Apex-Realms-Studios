@@ -6,44 +6,32 @@ const EXPERTISES = [
   {
     id: 'luau-arch',
     title: 'FOUNDER & SENIOR ENGINEER (ABDI)',
-    subtitle: '',
     desc: 'Abdullah Mohsin, also known as Abdi/batman1917a, founded Apex Realms Studios back in 2025 and is the senior engineer. He builds all the core of the games.',
-    icon: Cpu,
   },
   {
     id: 'procedural-levels',
-    title: 'PROCEDURAL LEVEL DESIGN',
-    subtitle: 'Algorithmic parkour generation, smart checkpoints, progressive difficulty',
-    desc: 'Level architecture designed with psychological pacing—keeping players in the zone and eager for the next milestone.',
-    icon: Compass,
+    title: 'CO-FOUNDER & LEAD DEVELOPER (GRIMM)',
+    desc: 'Grimm Co-Founded Apex Realms Studios with Abdi & Nyx, he makes stages in obbies.',
   },
   {
     id: 'vfx-lighting',
-    title: '3D REALM VISUAL FX',
-    subtitle: 'Atmospheric volumetric fog, custom particle emitters, cinematic neon',
-    desc: 'Pushing Roblox’s Future Is Bright lighting engine to console-grade aesthetic heights without taxing lower-end devices.',
-    icon: Sparkles,
+    title: 'CO-FOUNDER & LEAD DEVELOPER (NYX)',
+    desc: 'Nyx Co-Founded Apex Realms Studios in 2025 with Abdi & Grimm. She gives core ideas, make stages and design management.',
   },
   {
     id: 'multiplayer-rep',
-    title: 'MULTIPLAYER REPLICATION',
-    subtitle: 'Low-bandwidth network packets, lag compensation, smooth state interpolation',
-    desc: 'Optimized remote event frequency and spatial compression so combat and racing feel responsive regardless of ping.',
-    icon: Layers,
+    title: 'HEAD MODERATOR',
+    desc: 'KREEKKRAFT6000 is the head moderator of Apex Realms Studios and He leads the discord community and all the moderator staff.',
   },
   {
     id: 'game-economy',
     title: 'ECONOMY & BATTLE PASS',
-    subtitle: 'Balanced progression loops, cosmetic shops, daily login retention',
     desc: 'Monetization that respects the player: ethical cosmetic rewards, trading systems, and high day-30 retention mechanics.',
-    icon: Gamepad2,
   },
   {
     id: 'crossplay-opt',
     title: '60 FPS CROSS-PLAY',
-    subtitle: 'Adaptive touch controls, controller support, budget mobile scaling',
     desc: 'Seamless multiplatform accessibility. Players on phones, tablets, PCs, and consoles play together with parity.',
-    icon: Video,
   },
 ];
 
@@ -77,7 +65,7 @@ export default function ExpertisesListSection({ onOpenQuote }: ExpertisesListSec
                 }`}
               >
                 <span
-                  className={`font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight ${
+                  className={`font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight ${
                     isHovered ? 'text-[#0a0524]' : 'text-slate-400'
                   }`}
                 >
@@ -97,7 +85,7 @@ export default function ExpertisesListSection({ onOpenQuote }: ExpertisesListSec
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 
             <div className="relative z-10">
-              <h4 className="text-2xl sm:text-3xl font-black font-body mb-3 drop-shadow-sm">
+              <h4 className="text-xl sm:text-2xl font-black font-body mb-3 drop-shadow-sm">
                 {activeItem.title}
               </h4>
               <p className="text-xs sm:text-sm text-white/90 font-body leading-relaxed drop-shadow-xs">
