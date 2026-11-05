@@ -25,13 +25,13 @@ const EXPERTISES = [
   },
   {
     id: 'game-economy',
-    title: 'ECONOMY & BATTLE PASS',
-    desc: 'Monetization that respects the player: ethical cosmetic rewards, trading systems, and high day-30 retention mechanics.',
+    title: 'DEVELOPER',
+    desc: 'Rayyan2011RS joined Apex Realms Studios in 2025, he developed core scripts of Pixel Climb.',
   },
   {
     id: 'crossplay-opt',
-    title: '60 FPS CROSS-PLAY',
-    desc: 'Seamless multiplatform accessibility. Players on phones, tablets, PCs, and consoles play together with parity.',
+    title: 'DEVELOPER',
+    desc: 'caseyboy1910 joined Apex Realms Studios in 2025. he built main logic systems in Pixel Climb.',
   },
 ];
 
