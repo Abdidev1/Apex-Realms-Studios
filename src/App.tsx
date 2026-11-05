@@ -61,7 +61,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#5a1df5] font-body text-slate-900 selection:bg-[#34f546] selection:text-black">
-      {/* 3D Floating Crystals Three.js Canvas */}
+      {/* 3D Floating Crystals Three.js Cannvas */}
       <ThreeCanvas />
 
       {/* Adaptive Header Navigation */}
