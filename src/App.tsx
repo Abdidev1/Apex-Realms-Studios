@@ -7,7 +7,6 @@ import GreenAgencySection from './components/GreenAgencySection';
 import ShowcaseSection, { SHOWCASE_SLIDES, SlideItem } from './components/ShowcaseSection';
 import InnovationMarqueeSection from './components/InnovationMarqueeSection';
 import ExpertisesListSection from './components/ExpertisesListSection';
-import PresentationSphereSection from './components/PresentationSphereSection';
 import AboutAgencySection from './components/AboutAgencySection';
 import BeforeAfterSection from './components/BeforeAfterSection';
 import ResourcesSection from './components/ResourcesSection';
@@ -102,30 +101,27 @@ export default function App() {
           onOpenQuote={() => setIsQuoteOpen(true)}
         />
 
-        {/* 7. Presentation Sphere */}
-        <PresentationSphereSection />
-
-        {/* 8. White: About Agency */}
+        {/* 7. White: About Agency */}
         <AboutAgencySection
           onOpenMenu={() => setIsMenuOpen(true)}
         />
 
-        {/* 9. Before/After */}
+        {/* 8. Before/After */}
         <BeforeAfterSection />
 
-        {/* 10. Resources */}
+        {/* 9. Resources */}
         <ResourcesSection />
 
-        {/* 11. Quality Certifications */}
+        {/* 10. Quality Certifications */}
         <QualityCertificationsSection />
 
-        {/* 12. Brand Marquee */}
+        {/* 11. Brand Marquee */}
         <ClientsMarquee />
 
-        {/* 13. Testimonials & FAQ */}
+        {/* 12. Testimonials & FAQ */}
         <TestimonialsAndFaqSection />
 
-        {/* 14. Method in Steps */}
+        {/* 13. Method in Steps */}
         <MethodSection />
       </main>
 
