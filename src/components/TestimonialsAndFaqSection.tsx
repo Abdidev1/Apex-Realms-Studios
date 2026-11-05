@@ -23,27 +23,23 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: 'What is Apex Realms Studios?',
-    a: 'Apex Realms Studios is an independent game development studio specializing in high-performance, community-driven multiplayer experiences on Roblox. Founded by software engineer Abdullah Mohsin (Abdidev1), our games have amassed over 116 million total visits.',
+    a: 'Apex Realms Studios is a Roblox game development studio and community dedicated to engineering engaging, high quality platforming experiences, obbies, and interactive games on Roblox.',
   },
   {
-    q: 'Who develops the games and architecture?',
-    a: 'All engineering, systems architecture, Luau programming, physics calculations, mathematical level geometry, and 60 FPS performance optimizations are handled 100% solo by lead developer Abdullah Mohsin (@Abdidev1).',
+    q: 'Do games by Apex Realms Studios support cross platform play?',
+    a: 'Yes. All games are built to support seamless cross platform functionality across PC, mobile, tablet, and console devices.',
   },
   {
-    q: 'Can I commission custom Luau game engineering or consulting?',
-    a: 'Yes! We collaborate with brands, creators, and game studios looking to build custom game mechanics, procedural level systems, anti-cheat frameworks, or optimize existing experiences for 60 FPS mobile parity.',
+    q: 'How can I join and engage with the community?',
+    a: 'You can join the official Apex Realms Studios Roblox Group directly through the Roblox platform to receive operational updates, access game specific perks, and connect with other players across the community.',
   },
   {
-    q: 'How do you achieve 60 FPS on budget mobile devices?',
-    a: 'We implement custom spatial hashing, client-side visual interpolation, dynamic chunk streaming (unloading distant assets from memory), and zero-garbage-collection Luau tables to prevent CPU spikes.',
+    q: 'How are game data and stage progress saved?',
+    a: 'All stage progression and player stats are saved automatically using secure cloud DataStore systems. Your progress syncs across your sessions every time you leave or rejoin a game.',
   },
   {
-    q: 'How can I play Pixel Climb and other Apex Realms titles?',
-    a: 'All our titles are free to play globally on Roblox! Simply search for "Pixel Climb" or visit the official Apex Realms Studios group page to jump into any of our active multiplayer servers on PC, mobile, or console.',
-  },
-  {
-    q: 'How can I join the community or stay updated?',
-    a: 'You can join our official Roblox Group, hop into our Discord community server, or follow Abdullah Mohsin on GitHub (@Abdidev1) where open-source modules and devlogs are shared.',
+    q: 'Can community members suggest features or report bugs?',
+    a: 'Yes! Feedback, feature requests, and bug reports are actively welcomed through the official Roblox community group wall and developer channels to help improve continuous update cycles.',
   },
 ];
 
