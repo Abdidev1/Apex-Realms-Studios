@@ -9,7 +9,6 @@ const EXPERTISES = [
     subtitle: '',
     desc: 'Abdullah Mohsin, also known as Abdi/batman1917a, founded Apex Realms Studios back in 2025 and is the senior engineer. He builds all the core of the games.',
     icon: Cpu,
-    image: '/src/assets/images/slide_keynote_speaker_1793646163009.jpg',
   },
   {
     id: 'procedural-levels',
@@ -17,7 +16,6 @@ const EXPERTISES = [
     subtitle: 'Algorithmic parkour generation, smart checkpoints, progressive difficulty',
     desc: 'Level architecture designed with psychological pacing—keeping players in the zone and eager for the next milestone.',
     icon: Compass,
-    image: '/src/assets/images/slide_space_earth_1793646163026.jpg',
   },
   {
     id: 'vfx-lighting',
@@ -25,7 +23,6 @@ const EXPERTISES = [
     subtitle: 'Atmospheric volumetric fog, custom particle emitters, cinematic neon',
     desc: 'Pushing Roblox’s Future Is Bright lighting engine to console-grade aesthetic heights without taxing lower-end devices.',
     icon: Sparkles,
-    image: '/src/assets/images/slide_hypercar_mobility_1793646164240.jpg',
   },
   {
     id: 'multiplayer-rep',
@@ -33,7 +30,6 @@ const EXPERTISES = [
     subtitle: 'Low-bandwidth network packets, lag compensation, smooth state interpolation',
     desc: 'Optimized remote event frequency and spatial compression so combat and racing feel responsive regardless of ping.',
     icon: Layers,
-    image: '/src/assets/images/slide_equestrian_luxury_1793646164149.jpg',
   },
   {
     id: 'game-economy',
@@ -41,7 +37,6 @@ const EXPERTISES = [
     subtitle: 'Balanced progression loops, cosmetic shops, daily login retention',
     desc: 'Monetization that respects the player: ethical cosmetic rewards, trading systems, and high day-30 retention mechanics.',
     icon: Gamepad2,
-    image: '/src/assets/images/slide_keynote_speaker_1793646163009.jpg',
   },
   {
     id: 'crossplay-opt',
@@ -49,7 +44,6 @@ const EXPERTISES = [
     subtitle: 'Adaptive touch controls, controller support, budget mobile scaling',
     desc: 'Seamless multiplatform accessibility. Players on phones, tablets, PCs, and consoles play together with parity.',
     icon: Video,
-    image: '/src/assets/images/slide_hypercar_mobility_1793646164240.jpg',
   },
 ];
 
@@ -96,25 +90,19 @@ export default function ExpertisesListSection({ onOpenQuote }: ExpertisesListSec
 
         {/* Right: Floating Interactive Preview Card in English */}
         <div className="lg:col-span-5 flex flex-col items-center">
-          <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden bg-slate-950 shadow-2xl border border-slate-200 group">
-            <img
-              src={activeItem.image}
-              alt={activeItem.title}
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+          <div 
+            className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/20 group p-8 flex flex-col justify-end text-white"
+            style={{ backgroundColor: '#7d12ff' }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 
-            {/* Content overlay */}
-            <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-              <div>
-                <h4 className="text-2xl font-black font-body mb-3">
-                  {activeItem.title}
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-200 font-body leading-relaxed">
-                  {activeItem.desc}
-                </p>
-              </div>
+            <div className="relative z-10">
+              <h4 className="text-2xl sm:text-3xl font-black font-body mb-3 drop-shadow-sm">
+                {activeItem.title}
+              </h4>
+              <p className="text-xs sm:text-sm text-white/90 font-body leading-relaxed drop-shadow-xs">
+                {activeItem.desc}
+              </p>
             </div>
           </div>
         </div>
