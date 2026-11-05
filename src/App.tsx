@@ -9,7 +9,6 @@ import InnovationMarqueeSection from './components/InnovationMarqueeSection';
 import ExpertisesListSection from './components/ExpertisesListSection';
 import AboutAgencySection from './components/AboutAgencySection';
 import TestimonialsAndFaqSection from './components/TestimonialsAndFaqSection';
-import MethodSection from './components/MethodSection';
 import Footer from './components/Footer';
 import MenuModal from './components/MenuModal';
 import QuoteModal from './components/QuoteModal';
@@ -104,9 +103,6 @@ export default function App() {
 
         {/* 8. Testimonials & FAQ */}
         <TestimonialsAndFaqSection />
-
-        {/* 9. Method in Steps */}
-        <MethodSection />
       </main>
 
       {/* Footer */}
