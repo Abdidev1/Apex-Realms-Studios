@@ -4,19 +4,19 @@ import { playClick } from '../utils/audio';
 
 const TESTIMONIALS = [
   {
-    quote: "Pixel Climb is hands-down the smoothest obby on the entire platform. The momentum conservation, air control, and edge-catch forgiveness feel so responsive compared to clunky default games!",
-    author: "Competitive Speedrunner",
-    company: "Top 10 Global Leaderboard Holder",
+    quote: "I was playing tower of hell and i just decided to join, i finished all the stages, i didn't talk much, i hope you guys get even more popular, or whatever",
+    author: "Ezra",
+    company: "Verified Community Member",
   },
   {
-    quote: "Abdullah's Luau architecture is masterclass level. Having 100+ active zombie AI entities pathfinding simultaneously in Undead Outbreak without dropping below 60 FPS on mobile is incredible.",
-    author: "Roblox Studio Creator",
-    company: "Community Game Developer & Collaborator",
+    quote: "I like how kind the owner was, and the obby is so cool and, color full , i love it so much, tysm for trusting me to be a member",
+    author: "Its_Noraineskiii",
+    company: "Verified Community Member",
   },
   {
-    quote: "The visual fidelity and sound design in Apex Realms titles rival console indie games. Our Discord community has sunk hundreds of hours exploring every single stage and easter egg.",
-    author: "Community Clan Leader",
-    company: "Apex Realms Discord Member",
+    quote: "This obby is a high quality obby with manyyyyy easy levels!",
+    author: "SpiderWoman",
+    company: "Verified Community Member",
   },
 ];
 
