@@ -26,7 +26,7 @@ export default function Footer({ onOpenQuote, onOpenMenu }: FooterProps) {
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between border-b border-white/20 pb-12 mb-16 gap-6">
           <div>
             <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-white font-black uppercase leading-none">
-              YOUR REALM. GAMES WITHOUT LIMITS.
+              GAMES WITHOUT LIMITS.
             </h2>
           </div>
         </div>
