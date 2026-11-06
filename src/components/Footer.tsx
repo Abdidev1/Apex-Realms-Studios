@@ -14,7 +14,7 @@ export default function Footer({ onOpenQuote, onOpenMenu }: FooterProps) {
   };
 
   return (
-    <footer id="contact" className="relative z-20 bg-[#5a1df5] text-white pt-24 pb-12 px-6 md:px-12 curved-top-white shadow-[0_-25px_60px_rgba(0,0,0,0.25)] select-none overflow-hidden">
+    <footer id="contact" className="relative z-20 bg-[#5a1df5] text-white pt-24 pb-12 px-6 md:px-12 shadow-[0_-25px_60px_rgba(0,0,0,0.25)] select-none overflow-hidden">
       {/* Background radial glow */}
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,rgba(255,255,255,0.15)_0%,transparent_70%)]"
