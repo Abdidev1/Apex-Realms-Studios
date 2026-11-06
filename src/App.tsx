@@ -10,12 +10,10 @@ import ExpertisesListSection from './components/ExpertisesListSection';
 import AboutAgencySection from './components/AboutAgencySection';
 import TestimonialsAndFaqSection from './components/TestimonialsAndFaqSection';
 import Footer from './components/Footer';
-import MenuModal from './components/MenuModal';
 import QuoteModal from './components/QuoteModal';
 import SlideModal from './components/SlideModal';
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState<SlideItem | null>(null);
 
@@ -25,17 +23,6 @@ export default function App() {
 
   const handleScrollToNext = () => {
     const el = document.getElementById('agence');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleNavigate = (sectionId: string) => {
-    if (sectionId === 'hero') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -62,7 +49,6 @@ export default function App() {
 
       {/* Adaptive Header Navigation */}
       <Header
-        onOpenMenu={() => setIsMenuOpen(true)}
         onOpenQuote={() => setIsQuoteOpen(true)}
       />
 
@@ -98,7 +84,7 @@ export default function App() {
 
         {/* 7. White: About Agency */}
         <AboutAgencySection
-          onOpenMenu={() => setIsMenuOpen(true)}
+          onOpenMenu={() => {}}
         />
 
         {/* 8. Testimonials & FAQ */}
@@ -108,17 +94,10 @@ export default function App() {
       {/* Footer */}
       <Footer
         onOpenQuote={() => setIsQuoteOpen(true)}
-        onOpenMenu={() => setIsMenuOpen(true)}
+        onOpenMenu={() => {}}
       />
 
       {/* Interactive Overlays */}
-      <MenuModal
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-        onNavigate={handleNavigate}
-        onOpenQuote={() => setIsQuoteOpen(true)}
-      />
-
       <QuoteModal
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
