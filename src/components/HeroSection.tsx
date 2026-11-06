@@ -24,7 +24,7 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
           <span className="block text-white drop-shadow-md">
           </span>
           <span className="block text-white drop-shadow-sm mt-2">
-            Transforming Ideas Into Play
+            Games without limits.
           </span>
         </h1>
       </div>
