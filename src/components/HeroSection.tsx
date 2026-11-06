@@ -22,10 +22,9 @@ export default function HeroSection({ onOpenDemo, onScrollToNext }: HeroSectionP
       <div className="relative z-20 my-auto flex flex-col items-center justify-center text-center">
         <h1 className="font-display text-[11vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] leading-[0.88] tracking-tight font-extrabold uppercase">
           <span className="block text-white drop-shadow-md">
-            YOUR REALM.
           </span>
           <span className="block text-white drop-shadow-sm mt-2">
-            GAMES WITHOUT LIMITS.
+            Transforming Ideas Into Play
           </span>
         </h1>
       </div>
