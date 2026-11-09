@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apex-realms-studios.vercel.app/sitemap.xml
